@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teltam AI - AI-Powered Translation & Transliteration Platform using LLM</title>
+    <meta name="description" content="Teltam is a state-of-the-art AI Translation & Transliteration tool powered by LLM. Translate text, documents, and content into multiple languages with precise contextual meaning, transliteration guides, and voice pronunciation.">
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <!-- Custom Style Sheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="bg-soft-gradient" style="padding-top: 85px;">
+
+    <!-- Global Header Placeholder -->
+    <header id="global-header"></header>
+
+    <!-- Redesigned Hero Section -->
+    <section class="hero-redesign py-5 py-lg-6 position-relative overflow-hidden animate-fade-in-up">
+        <!-- Background Blur Shapes -->
+        <div class="blur-shape blur-shape-1"></div>
+        <div class="blur-shape blur-shape-2"></div>
+        
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="row align-items-center py-4">
+                <!-- Left Side: Content Area -->
+                <div class="col-lg-6 col-md-12 mb-5 mb-lg-0 text-start">
+                    <span class="hero-badge"><i class="fas fa-sparkles text-indigo-600"></i> AI-Powered Translation Platform</span>
+                    <h1 class="display-4 fw-bold mb-3 text-slate-900" style="letter-spacing: -1.5px; line-height: 1.15; font-size: clamp(2.5rem, 5vw, 3.5rem);">
+                        Translate, Transliterate &amp; <span class="text-gradient-primary">Communicate Globally</span> with AI
+                    </h1>
+                    <p class="lead text-slate-700 mb-4" style="font-size: 1.08rem; line-height: 1.7;">
+                        Teltam utilizes advanced LLM-powered context mapping to translate text, scan documents, and build phonetic transliteration guides across scripts with accurate meaning and zero nuance loss.
+                    </p>
+                    <div class="d-flex gap-3 mb-4 flex-wrap">
+                        <a href="#playground" class="btn btn-primary-gradient px-4 py-3 rounded-pill">Start Translating</a>
+                        <a href="youtube-detail.html" class="btn btn-outline-custom px-4 py-3 rounded-pill"><i class="fas fa-play me-2 text-danger"></i>Watch Demo</a>
+                    </div>
+                    <!-- Trust Indicators -->
+                    <div class="d-flex gap-3 flex-wrap border-top pt-4 text-slate-800" style="border-color: rgba(226, 232, 240, 0.8) !important;">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="fas fa-check-circle text-success" style="font-size: 1.1rem;"></i>
+                            <span class="fw-semibold">150+ Languages</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="fas fa-check-circle text-success" style="font-size: 1.1rem;"></i>
+                            <span class="fw-semibold">AI Powered</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="fas fa-check-circle text-success" style="font-size: 1.1rem;"></i>
+                            <span class="fw-semibold">Fast &amp; Accurate</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Side: AI Translation Illustration -->
+                <div class="col-lg-6 col-md-12 text-center">
+                    <div class="hero-illustration-wrapper py-4">
+                        <!-- Central Glow Orb -->
+                        <div class="central-glow-orb"></div>
+                        
+                        <!-- Dashboard Mockup Console -->
+                        <div class="glass-card main-dashboard-mockup p-4 shadow-lg text-start">
+                            <div class="d-flex align-items-center gap-2 mb-3 border-bottom pb-2" style="border-color: rgba(226, 232, 240, 0.4) !important;">
+                                <span style="width: 10px; height: 10px; background: #ef4444; border-radius: 50%;"></span>
+                                <span style="width: 10px; height: 10px; background: #fbbf24; border-radius: 50%;"></span>
+                                <span style="width: 10px; height: 10px; background: #10b981; border-radius: 50%;"></span>
+                                <small class="text-muted ms-2" style="font-size:0.75rem; font-family: monospace;">teltam-translator-console</small>
+                            </div>
+                            <div class="font-monospace text-slate-600 small mb-2" style="font-size:0.8rem;">
+                                <span class="text-indigo-600">&gt;</span> initializing teltam-llm-v3...
+                            </div>
+                            <div class="font-monospace text-slate-600 small mb-3" style="font-size:0.8rem;">
+                                <span class="text-indigo-600">&gt;</span> context mapping analytics online.
+                            </div>
+                            <!-- UI translation visual link waves -->
+                            <div class="d-flex justify-content-between align-items-center bg-light p-3 rounded-3 mb-2" style="font-size: 0.8rem; border: 1px solid rgba(226, 232, 240, 0.6);">
+                                <span class="fw-semibold text-slate-700">Source Text</span>
+                                <i class="fas fa-exchange-alt text-indigo-600"></i>
+                                <span class="fw-semibold text-indigo-700">AI Context Output</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating Language Card 1: English -> Tamil -->
+                        <div class="glass-card hero-floating-card card-en-ta p-3 shadow-sm text-start float-ani-1">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-primary-subtle text-indigo-700 px-2 py-1" style="font-size: 0.7rem;">EN ➔ TA</span>
+                                <span class="stars-rating"><i class="fas fa-sparkles text-indigo-600"></i> AI Match</span>
+                            </div>
+                            <div class="small fw-semibold text-slate-800">"Hello"</div>
+                            <div class="small fw-bold text-indigo-600">"வணக்கம்"</div>
+                            <div class="text-muted mt-1" style="font-size: 0.65rem; font-family: monospace;">phonetic: Va-nak-kam</div>
+                        </div>
+
+                        <!-- Floating Language Card 2: Hindi -> English -->
+                        <div class="glass-card hero-floating-card card-hi-en p-3 shadow-sm text-start float-ani-2">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-success-subtle text-success px-2 py-1" style="font-size: 0.7rem;">HI ➔ EN</span>
+                                <span class="stars-rating" style="font-size: 0.65rem; color: #10b981;"><i class="fas fa-bolt"></i> Live</span>
+                            </div>
+                            <div class="small fw-semibold text-slate-800">"नमस्ते"</div>
+                            <div class="small fw-bold text-success">"Hello"</div>
+                            <div class="text-muted mt-1" style="font-size: 0.65rem; font-family: monospace;">translit: namaste</div>
+                        </div>
+
+                        <!-- Floating Language Card 3: Spanish -> French -->
+                        <div class="glass-card hero-floating-card card-es-fr p-3 shadow-sm text-start float-ani-3">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-warning-subtle text-warning px-2 py-1" style="font-size: 0.7rem; color: #d97706 !important;">ES ➔ FR</span>
+                                <span class="stars-rating" style="font-size: 0.65rem; color: #fbbf24;"><i class="fas fa-check-circle"></i> 99.8%</span>
+                            </div>
+                            <div class="small fw-semibold text-slate-800">"Buenos días"</div>
+                            <div class="small fw-bold text-warning" style="color: #d97706 !important;">"Bonjour"</div>
+                            <div class="text-muted mt-1" style="font-size: 0.65rem; font-family: monospace;">pron: /bɔ̃ʒuʁ/</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Translation Tool Playground Section -->
+    <section id="playground" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-xl-8">
+                    <div class="translation-widget glass-card p-4">
+                        <div class="row align-items-center mb-4">
+                            <div class="col-md-5 d-flex align-items-center gap-2">
+                                <label for="sourceLanguage" class="small fw-bold text-slate-700">From:</label>
+                                <select id="sourceLanguage" class="language-select-custom w-100">
+                                    <option value="en">English (Detect Language)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2 text-center my-2 my-md-0">
+                                <span class="d-inline-flex align-items-center justify-content-center bg-light rounded-circle text-slate-700" style="width: 38px; height: 38px;">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </span>
+                            </div>
+                            <div class="col-md-5 d-flex align-items-center gap-2">
+                                <label for="targetLanguage" class="small fw-bold text-slate-700">To:</label>
+                                <select id="targetLanguage" class="language-select-custom w-100">
+                                    <option value="es">Spanish (Español)</option>
+                                    <option value="fr">French (Français)</option>
+                                    <option value="de">German (Deutsch)</option>
+                                    <option value="ta">Tamil (தமிழ்)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="sourceText" class="visually-hidden">Source Text</label>
+                                <textarea id="sourceText" class="form-control textarea-custom border p-3" rows="6" placeholder="Type or paste text here (e.g. 'Hello, how are you?')..."></textarea>
+                                <div class="d-flex justify-content-between align-items-center mt-2 px-1">
+                                    <span class="small text-muted">Press Ctrl + Enter to translate</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="output-container position-relative bg-light p-3">
+                                    <!-- Spinner -->
+                                    <div id="translationSpinner" class="position-absolute top-50 start-50 translate-middle d-none text-center">
+                                        <div class="loader-spinner mb-2"></div>
+                                        <div class="small fw-semibold text-indigo-600">Contextual translation mapping...</div>
+                                    </div>
+                                    <div id="outputText" class="fs-5 fw-500 mb-3" style="color: var(--color-slate-900);">Translation will appear here.</div>
+
+                                    <!-- Interactive Details Container -->
+                                    <div id="activeDetailsContainer" class="d-none border-top pt-3 mt-3">
+                                        <div class="mb-2">
+                                            <span class="badge bg-secondary-subtle text-secondary me-2">Transliteration</span>
+                                            <span id="outputTranslit" class="text-slate-800 font-monospace small"></span>
+                                        </div>
+                                        <div class="mb-2">
+                                            <span class="badge bg-primary-subtle text-indigo-700 me-2">Pronunciation IPA</span>
+                                            <span id="outputPron" class="text-slate-800 font-monospace small"></span>
+                                        </div>
+                                        <div id="outputGrammar" class="small fw-semibold text-success mt-2"></div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-end gap-2 mt-2">
+                                    <button id="speakBtn" class="btn btn-light btn-sm text-dark px-3" title="Speak translation"><i class="fas fa-volume-up me-1"></i> Speak</button>
+                                    <button id="copyBtn" class="btn btn-light btn-sm text-dark px-3" title="Copy Translation"><i class="fas fa-copy me-1"></i> Copy</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button id="translateBtn" class="btn btn-primary-gradient px-5 py-3">Translate with Teltam LLM</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features Section -->
+    <section class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="text-indigo-600 fw-bold text-uppercase tracking-wider">Features</span>
+                <h2 class="display-5 fw-bold mt-2">Unmatched Translation Precision</h2>
+                <p class="text-slate-700 mx-auto" style="max-width: 600px;">Experience the power of advanced language learning models fine-tuned for semantic translation.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card p-4 h-100">
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Contextual Translation</h4>
+                        <p class="text-slate-700 mb-0">Unlike generic machine translators, Teltam parses idiomatic expressions and cultural nuances to ensure meaning is never lost.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card p-4 h-100">
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-font"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Transliteration</h4>
+                        <p class="text-slate-700 mb-0">Convert text from one script to another logically so you can read and pronounce non-native alphabets instantly.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card p-4 h-100">
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-volume-up"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Pronunciation Synthesis</h4>
+                        <p class="text-slate-700 mb-0">Listen to high-fidelity, natural voice synthesis of translated phrases, with integrated IPA phonetics support.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card p-4 h-100">
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-spell-check"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Grammar & Tone Assist</h4>
+                        <p class="text-slate-700 mb-0">Refine translations with built-in grammar checks and choose professional, casual, or poetic tones.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card p-4 h-100">
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-file-upload"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Document Translation</h4>
+                        <p class="text-slate-700 mb-0">Upload documents like PDFs, DOCX, and text files. Preserve headers, layouts, and tables in the target translation.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card p-4 h-100">
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Language Detection</h4>
+                        <p class="text-slate-700 mb-0">Teltam auto-identifies source dialects, including mixed-language inputs (e.g. Spanglish or Hinglish).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supported Languages Section -->
+    <section class="py-5 bg-soft-gradient">
+        <div class="container py-3">
+            <div class="text-center mb-5">
+                <span class="text-indigo-600 fw-bold text-uppercase">Global Reach</span>
+                <h2 class="display-6 fw-bold mt-2">120+ Languages Supported</h2>
+                <p class="text-slate-700">Translate and transliterate globally. Below are a few of our popular systems.</p>
+            </div>
+            
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <div class="lang-badge"><span class="fs-5">🇪🇸</span> Spanish (Español)</div>
+                <div class="lang-badge"><span class="fs-5">🇫🇷</span> French (Français)</div>
+                <div class="lang-badge"><span class="fs-5">🇩🇪</span> German (Deutsch)</div>
+                <div class="lang-badge"><span class="fs-5">🇮🇳</span> Tamil (தமிழ்)</div>
+                <div class="lang-badge"><span class="fs-5">🇯🇵</span> Japanese (日本語)</div>
+                <div class="lang-badge"><span class="fs-5">🇮🇹</span> Italian (Italiano)</div>
+                <div class="lang-badge"><span class="fs-5">🇨🇳</span> Chinese (中文)</div>
+                <div class="lang-badge"><span class="fs-5">🇸🇦</span> Arabic (العربية)</div>
+                <div class="lang-badge"><span class="fs-5">🇵🇹</span> Portuguese (Português)</div>
+                <div class="lang-badge"><span class="fs-5">🇰🇷</span> Korean (한국어)</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="text-indigo-600 fw-bold text-uppercase">Workflow</span>
+                <h2 class="display-5 fw-bold mt-2">How Teltam Works</h2>
+                <p class="text-slate-700">A simple, 3-step process powered by state-of-the-art LLMs.</p>
+            </div>
+
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="step-number mb-3">1</div>
+                        <h4 class="fw-bold">Input Content</h4>
+                        <p class="text-slate-700 px-lg-3">Type your text, upload documents, or paste speech snippets into the input console.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="step-number mb-3">2</div>
+                        <h4 class="fw-bold">LLM Parsing</h4>
+                        <p class="text-slate-700 px-lg-3">Our models scan vocabulary context, detect grammar, and build a transliteration guide.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="step-number mb-3">3</div>
+                        <h4 class="fw-bold">Review & Speak</h4>
+                        <p class="text-slate-700 px-lg-3">Verify tone settings, listen to natural voice guide, and copy your high-fidelity translations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Tools Section Preview -->
+    <section class="py-5 bg-soft-gradient">
+        <div class="container py-4">
+            <div class="row align-items-center mb-5">
+                <div class="col-md-8 text-center text-md-start">
+                    <span class="text-indigo-600 fw-bold text-uppercase">AI Suites</span>
+                    <h2 class="display-5 fw-bold mt-2">Specialized Linguistic Tools</h2>
+                </div>
+                <div class="col-md-4 text-center text-md-end mt-3 mt-md-0">
+                    <a href="ai-tools.html" class="btn btn-outline-custom">View All AI Tools</a>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="glass-card p-4">
+                        <div class="feature-icon-wrapper"><i class="fas fa-sync-alt"></i></div>
+                        <h4 class="fw-bold">Contextual Translators</h4>
+                        <p class="text-slate-700">Translates full papers, paragraphs, or emails, keeping specialized vocabularies intact.</p>
+                        <a href="ai-tools.html" class="text-indigo-600 fw-semibold text-decoration-none">Launch Tool <i class="fas fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="glass-card p-4">
+                        <div class="feature-icon-wrapper"><i class="fas fa-keyboard"></i></div>
+                        <h4 class="fw-bold">Transliteration Engine</h4>
+                        <p class="text-slate-700">Type in your script and see phonetics mapped instantly to simplify pronunciation studies.</p>
+                        <a href="ai-tools.html" class="text-indigo-600 fw-semibold text-decoration-none">Launch Tool <i class="fas fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mx-auto">
+                    <div class="glass-card p-4">
+                        <div class="feature-icon-wrapper"><i class="fas fa-file-word"></i></div>
+                        <h4 class="fw-bold">Document Translator</h4>
+                        <p class="text-slate-700">Convert PDFs, docx, slide decks, and subtitles into localized files while retaining layouts.</p>
+                        <a href="ai-tools.html" class="text-indigo-600 fw-semibold text-decoration-none">Launch Tool <i class="fas fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Preview Section -->
+    <section class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="text-indigo-600 fw-bold text-uppercase">Pricing</span>
+                <h2 class="display-5 fw-bold mt-2">Flexible Plans for Everyone</h2>
+                <p class="text-slate-700">Start translating for free, or unlock advanced features with a premium plan.</p>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Free Plan -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card p-4 h-100 text-center d-flex flex-column justify-content-between">
+                        <div>
+                            <h4 class="fw-bold text-slate-800">Free</h4>
+                            <p class="text-muted small">For casual translation tasks</p>
+                            <div class="my-4">
+                                <span class="display-4 fw-bold">$0</span>
+                                <span class="text-muted">/month</span>
+                            </div>
+                            <ul class="list-unstyled text-start my-4 d-flex flex-column gap-3">
+                                <li><i class="fas fa-check text-success me-2"></i> 5,000 words per month</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Basic language translation</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Standard voice output</li>
+                                <li class="text-muted"><i class="fas fa-times me-2"></i> Document translation</li>
+                            </ul>
+                        </div>
+                        <a href="register.html" class="btn btn-outline-custom w-100 mt-4">Start Free</a>
+                    </div>
+                </div>
+                
+                <!-- Pro Plan -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card p-4 h-100 text-center d-flex flex-column justify-content-between border border-primary relative" style="border-color: var(--color-indigo-600) !important; box-shadow: 0 15px 40px rgba(124, 58, 237, 0.12);">
+                        <div>
+                            <div class="badge bg-primary text-white mb-2 py-2 px-3 rounded-pill" style="background: var(--brand-primary-gradient) !important;">Most Popular</div>
+                            <h4 class="fw-bold text-slate-800">Pro</h4>
+                            <p class="text-muted small">For content creators and professionals</p>
+                            <div class="my-4">
+                                <span class="display-4 fw-bold">$29</span>
+                                <span class="text-muted">/month</span>
+                            </div>
+                            <ul class="list-unstyled text-start my-4 d-flex flex-column gap-3">
+                                <li><i class="fas fa-check text-success me-2"></i> Unlimited words translation</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Premium LLM (Contextual Accuracy)</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Phonetic transliteration system</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Document Translation (100 files/mo)</li>
+                                <li><i class="fas fa-check text-success me-2"></i> API Access (Developer key)</li>
+                            </ul>
+                        </div>
+                        <a href="register.html" class="btn btn-primary-gradient w-100 mt-4">Upgrade to Pro</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 bg-soft-gradient">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="text-indigo-600 fw-bold text-uppercase">Testimonials</span>
+                <h2 class="display-5 fw-bold mt-2">What Our Users Say</h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="glass-card p-4 testimonial-card bg-white">
+                        <div class="stars-rating mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 italic">"Teltam changed how I learn languages. The transliteration matches local dialects perfectly and the voice synth sounds completely human."</p>
+                        <div class="d-flex align-items-center gap-3 mt-4">
+                            <div class="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center fw-bold" style="width: 44px; height: 44px;">AS</div>
+                            <div>
+                                <h6 class="fw-bold mb-0">Alejandro Silva</h6>
+                                <small class="text-muted">Language Student</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="glass-card p-4 testimonial-card bg-white">
+                        <div class="stars-rating mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 italic">"Our engineering firm uses the Teltam API for localizing design documents. Context preservation has saved us hundreds of manual proofing hours."</p>
+                        <div class="d-flex align-items-center gap-3 mt-4">
+                            <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center fw-bold" style="width: 44px; height: 44px;">SL</div>
+                            <div>
+                                <h6 class="fw-bold mb-0">Sarah Jenkins</h6>
+                                <small class="text-muted">Tech Product Manager</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mx-auto">
+                    <div class="glass-card p-4 testimonial-card bg-white">
+                        <div class="stars-rating mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 italic">"The document translation feature maintains formatting exactly! I translate contracts between French and English in just a few clicks."</p>
+                        <div class="d-flex align-items-center gap-3 mt-4">
+                            <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center fw-bold" style="width: 44px; height: 44px;">MD</div>
+                            <div>
+                                <h6 class="fw-bold mb-0">Marc Dubois</h6>
+                                <small class="text-muted">Legal Consultant</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog & Video Preview Section -->
+    <section class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="row align-items-center mb-5">
+                <div class="col-md-8 text-center text-md-start">
+                    <span class="text-indigo-600 fw-bold text-uppercase">Learning Center</span>
+                    <h2 class="display-5 fw-bold mt-2">Latest Articles & Video Guides</h2>
+                </div>
+                <div class="col-md-4 text-center text-md-end mt-3 mt-md-0">
+                    <a href="blog.html" class="btn btn-outline-custom me-2">Read Blog</a>
+                    <a href="youtube.html" class="btn btn-outline-custom">Watch Tutorials</a>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Blog Preview -->
+                <div class="col-md-6">
+                    <div class="glass-card overflow-hidden h-100">
+                        <div class="p-4">
+                            <div class="d-flex gap-2 mb-3">
+                                <span class="badge bg-indigo-100 text-indigo-700" style="background: rgba(79, 70, 229, 0.08);">AI & Tech</span>
+                                <span class="text-muted small">June 8, 2026</span>
+                            </div>
+                            <h4 class="fw-bold"><a href="blog-detail.html" class="text-decoration-none text-dark">How LLMs are Revolutionizing Dialect & Idiom Translations</a></h4>
+                            <p class="text-slate-700 mt-2">Discover how modern neural network pipelines look past basic word replacements to decode true cultural context...</p>
+                            <a href="blog-detail.html" class="text-indigo-600 fw-semibold text-decoration-none d-inline-flex align-items-center mt-3">Read Full Article <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video Preview -->
+                <div class="col-md-6">
+                    <div class="glass-card overflow-hidden h-100">
+                        <div class="p-4">
+                            <div class="d-flex gap-2 mb-3">
+                                <span class="badge bg-danger-subtle text-danger">Video Guide</span>
+                                <span class="text-muted small">5 Mins Watch</span>
+                            </div>
+                            <h4 class="fw-bold"><a href="youtube-detail.html" class="text-decoration-none text-dark">Getting Started with Teltam Document Translators</a></h4>
+                            <p class="text-slate-700 mt-2">Watch our quick walkthrough showing how to translate complex PDFs while preserving alignment, tables, and images.</p>
+                            <a href="youtube-detail.html" class="text-indigo-600 fw-semibold text-decoration-none d-inline-flex align-items-center mt-3">Watch Tutorial <i class="fas fa-play me-2 order-first text-danger"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5 bg-soft-gradient">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="text-indigo-600 fw-bold text-uppercase">FAQs</span>
+                <h2 class="display-5 fw-bold mt-2">Frequently Asked Questions</h2>
+                <p class="text-slate-700">Find answers to common questions about Teltam.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- FAQ 1 -->
+                    <div class="accordion-item-custom">
+                        <button class="accordion-button-custom" aria-controls="faqCollapse1">
+                            What makes Teltam different from other translation tools?
+                        </button>
+                        <div id="faqCollapse1" class="accordion-collapse-custom">
+                            <div class="accordion-body-custom">
+                                Teltam utilizes custom-trained Large Language Models (LLMs) rather than traditional phrase-based machine translations. This allows our system to capture slang, formatting rules, cultural contexts, and technical vocabularies with significantly higher accuracy.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="accordion-item-custom">
+                        <button class="accordion-button-custom" aria-controls="faqCollapse2">
+                            What is transliteration, and how is it used?
+                        </button>
+                        <div id="faqCollapse2" class="accordion-collapse-custom">
+                            <div class="accordion-body-custom">
+                                Transliteration maps text from one character set to another (e.g., converting Tamil characters into Romanized phonetics). This helps non-native speakers read and speak phrases correctly even if they cannot read the local script.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="accordion-item-custom">
+                        <button class="accordion-button-custom" aria-controls="faqCollapse3">
+                            Can I translate scanned PDF documents?
+                        </button>
+                        <div id="faqCollapse3" class="accordion-collapse-custom">
+                            <div class="accordion-body-custom">
+                                Yes. Teltam Pro supports uploading standard and scanned PDFs. Our backend performs intelligent OCR to read the text and then reconstructs the original document structure in the target language.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Banner -->
+    <section class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="p-5 rounded-4 text-center text-white bg-dark-gradient" style="box-shadow: var(--brand-accent-glow);">
+                <h2 class="display-5 fw-bold mb-3">Ready to Translate Globally?</h2>
+                <p class="lead mx-auto mb-4" style="max-width: 600px; opacity: 0.85;">Join thousands of students, developers, and businesses using Teltam to communicate with the world.</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="register.html" class="btn btn-primary-gradient px-4 py-3">Get Started for Free</a>
+                    <a href="contact.html" class="btn btn-outline-light rounded-pill px-4 py-3">Contact Support</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer Placeholder -->
+    <footer id="global-footer"></footer>
+
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Component and Main Scripts -->
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

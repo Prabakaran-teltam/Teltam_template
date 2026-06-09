@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Dashboard - Teltam AI</title>
+    <meta name="description" content="Access Teltam's suite of AI linguistic tools: Text translation, transliteration guide generators, automated document localizers, and context grammar helpers.">
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <!-- Custom Style Sheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="bg-soft-gradient" style="padding-top: 85px;">
+
+    <!-- Global Header Placeholder -->
+    <header id="global-header"></header>
+
+    <!-- Subpage Hero Section -->
+    <section class="py-5 bg-white border-bottom animate-fade-in-up">
+        <div class="container text-center py-4">
+            <span class="hero-badge"><i class="fas fa-magic"></i> AI Tools Console</span>
+            <h1 class="display-4 fw-bold">Language <span class="text-gradient-primary">Toolkit Console</span></h1>
+            <p class="lead text-slate-700 mx-auto" style="max-width: 600px; font-size: 1.1rem;">
+                Select a tool tab below to run real-time contextual translations, transliterations, and file processing.
+            </p>
+        </div>
+    </section>
+
+    <!-- Tools Interface Tabs -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Navigation Tabs Sidebar / Topbar -->
+                <div class="col-lg-3 mb-4">
+                    <div class="glass-card p-3 sticky-lg-top" style="top: 100px; z-index: 10;">
+                        <h5 class="fw-bold mb-3 px-2 text-slate-900">Translation Tools</h5>
+                        <div class="nav flex-column nav-pills gap-2" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <button class="nav-link text-start sidebar-link-active p-3 border-0 rounded-3 text-slate-700 active" id="v-pills-translator-tab" data-bs-toggle="pill" data-bs-target="#v-pills-translator" type="button" role="tab" aria-controls="v-pills-translator" aria-selected="true">
+                                <i class="fas fa-language me-2"></i> Text Translator
+                            </button>
+                            <button class="nav-link text-start p-3 border-0 rounded-3 text-slate-700" id="v-pills-docs-tab" data-bs-toggle="pill" data-bs-target="#v-pills-docs" type="button" role="tab" aria-controls="v-pills-docs" aria-selected="false">
+                                <i class="fas fa-file-pdf me-2"></i> Doc Translator
+                            </button>
+                            <button class="nav-link text-start p-3 border-0 rounded-3 text-slate-700" id="v-pills-grammar-tab" data-bs-toggle="pill" data-bs-target="#v-pills-grammar" type="button" role="tab" aria-controls="v-pills-grammar" aria-selected="false">
+                                <i class="fas fa-spell-check me-2"></i> Grammar Assist
+                            </button>
+                            <button class="nav-link text-start p-3 border-0 rounded-3 text-slate-700" id="v-pills-transliterate-tab" data-bs-toggle="pill" data-bs-target="#v-pills-transliterate" type="button" role="tab" aria-controls="v-pills-transliterate" aria-selected="false">
+                                <i class="fas fa-keyboard me-2"></i> Script Transliteration
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Contents Window -->
+                <div class="col-lg-9">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        
+                        <!-- Tool 1: Text Translator -->
+                        <div class="tab-pane fade show active" id="v-pills-translator" role="tabpanel" aria-labelledby="v-pills-translator-tab">
+                            <div class="glass-card p-4">
+                                <div class="mb-4">
+                                    <h3 class="fw-bold mb-2">AI Text Translator</h3>
+                                    <p class="text-slate-700 mb-0">Contextual language conversion using fine-tuned translation parameters.</p>
+                                </div>
+                                
+                                <div class="row align-items-center mb-4">
+                                    <div class="col-md-5 d-flex align-items-center gap-2">
+                                        <label for="sourceLanguage" class="small fw-bold text-slate-700">From:</label>
+                                        <select class="language-select-custom w-100">
+                                            <option value="en">English (Detect Language)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2 text-center my-2 my-md-0">
+                                        <span class="d-inline-flex align-items-center justify-content-center bg-light rounded-circle text-slate-700" style="width: 38px; height: 38px;">
+                                            <i class="fas fa-exchange-alt"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-md-5 d-flex align-items-center gap-2">
+                                        <label for="targetLanguage" class="small fw-bold text-slate-700">To:</label>
+                                        <select id="targetLanguage" class="language-select-custom w-100">
+                                            <option value="es">Spanish (Español)</option>
+                                            <option value="fr">French (Français)</option>
+                                            <option value="de">German (Deutsch)</option>
+                                            <option value="ta">Tamil (தமிழ்)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="sourceText" class="visually-hidden">Source Input Text</label>
+                                        <textarea id="sourceText" class="form-control textarea-custom border p-3" rows="7" placeholder="Type or paste text here (e.g. 'hello, how are you?')..."></textarea>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="output-container position-relative bg-light p-3" style="min-height: 196px;">
+                                            <div id="translationSpinner" class="position-absolute top-50 start-50 translate-middle d-none text-center">
+                                                <div class="loader-spinner mb-2"></div>
+                                                <div class="small fw-semibold text-indigo-600">Generating translation...</div>
+                                            </div>
+                                            <div id="outputText" class="fs-5 fw-500 mb-3 text-slate-900">Translation will appear here.</div>
+
+                                            <div id="activeDetailsContainer" class="d-none border-top pt-3 mt-3">
+                                                <div class="mb-2">
+                                                    <span class="badge bg-secondary-subtle text-secondary me-2">Transliteration</span>
+                                                    <span id="outputTranslit" class="text-slate-800 font-monospace small"></span>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <span class="badge bg-primary-subtle text-indigo-700 me-2">Pronunciation IPA</span>
+                                                    <span id="outputPron" class="text-slate-800 font-monospace small"></span>
+                                                </div>
+                                                <div id="outputGrammar" class="small fw-semibold text-success mt-2"></div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-end gap-2 mt-2">
+                                            <button id="speakBtn" class="btn btn-light btn-sm text-dark px-3"><i class="fas fa-volume-up me-1"></i> Speak</button>
+                                            <button id="copyBtn" class="btn btn-light btn-sm text-dark px-3"><i class="fas fa-copy me-1"></i> Copy</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="text-center mt-4">
+                                    <button id="translateBtn" class="btn btn-primary-gradient px-5 py-3">Translate with Teltam LLM</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tool 2: Document Translator -->
+                        <div class="tab-pane fade" id="v-pills-docs" role="tabpanel" aria-labelledby="v-pills-docs-tab">
+                            <div class="glass-card p-4">
+                                <div class="mb-4">
+                                    <h3 class="fw-bold mb-2">AI Document Translator</h3>
+                                    <p class="text-slate-700 mb-0">Upload PDF, DOCX, or PPTX files. Teltam localizes structural text while preserving document alignments.</p>
+                                </div>
+
+                                <div class="border border-2 border-dashed rounded-4 p-5 text-center bg-light mb-4" id="dropzoneContainer" style="cursor: pointer;">
+                                    <i class="fas fa-cloud-upload-alt text-indigo-600 display-4 mb-3" style="color:#4f46e5;"></i>
+                                    <h5 class="fw-bold">Drag and drop file here</h5>
+                                    <p class="text-muted small">Supports PDF, DOCX, PPTX up to 15MB. Maximum 10 pages on Trial plan.</p>
+                                    <input type="file" id="fileInputSelect" class="d-none">
+                                    <button class="btn btn-primary-gradient px-4" onclick="document.getElementById('fileInputSelect').click();">Browse Files</button>
+                                </div>
+
+                                <div id="docTranslateOptions" class="row align-items-center g-3 d-none">
+                                    <div class="col-md-5">
+                                        <select class="form-select py-2">
+                                            <option value="es">Spanish (Español)</option>
+                                            <option value="fr">French (Français)</option>
+                                            <option value="de">German (Deutsch)</option>
+                                            <option value="ta">Tamil (தமிழ்)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-7 text-md-end">
+                                        <button id="startDocTranslateBtn" class="btn btn-success px-4 py-2"><i class="fas fa-cog me-2"></i> Start Document Translation</button>
+                                    </div>
+                                </div>
+
+                                <div id="docProgressIndicator" class="text-center p-4 d-none">
+                                    <div class="loader-spinner mx-auto mb-3"></div>
+                                    <h6 class="fw-bold">Uploading & Parsing Document layout...</h6>
+                                    <p class="text-muted small">Translating tokens and compiling layout pages...</p>
+                                </div>
+
+                                <div id="docCompleteIndicator" class="text-center p-4 bg-success-subtle rounded-3 d-none">
+                                    <i class="fas fa-check-circle text-success display-5 mb-2"></i>
+                                    <h5 class="fw-bold text-success">Translation Complete!</h5>
+                                    <p class="text-slate-800">Your original formatting, headings, and images have been successfully preserved.</p>
+                                    <a href="#" class="btn btn-success px-4 py-2 mt-2"><i class="fas fa-download me-2"></i> Download Translated File</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tool 3: Grammar Assist -->
+                        <div class="tab-pane fade" id="v-pills-grammar" role="tabpanel" aria-labelledby="v-pills-grammar-tab">
+                            <div class="glass-card p-4">
+                                <div class="mb-4">
+                                    <h3 class="fw-bold mb-2">AI Grammar & Spell Assist</h3>
+                                    <p class="text-slate-700 mb-0">Checks sentence syntax, spelling mistakes, punctuation structures, and context tones.</p>
+                                </div>
+
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="grammarInput" class="form-label fw-bold">Input Text</label>
+                                        <textarea id="grammarInput" class="form-control" rows="6" placeholder="Type or paste sentences with potential errors here..."></textarea>
+                                        <button id="grammarCheckBtn" class="btn btn-primary-gradient w-100 mt-3 py-2">Check Grammar</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold">Suggestions & Corrections</label>
+                                        <div id="grammarResultBox" class="output-container p-3 bg-light" style="min-height: 156px;">
+                                            <p class="text-muted">Enter text on the left and trigger check to view suggestions.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tool 4: Script Transliteration -->
+                        <div class="tab-pane fade" id="v-pills-transliterate" role="tabpanel" aria-labelledby="v-pills-transliterate-tab">
+                            <div class="glass-card p-4">
+                                <div class="mb-4">
+                                    <h3 class="fw-bold mb-2">AI Script Transliteration</h3>
+                                    <p class="text-slate-700 mb-0">Maps words from script-native character sets (like Tamil, Arabic) directly to roman phonetic layouts.</p>
+                                </div>
+
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="translitSourceInput" class="form-label fw-bold">Native Script Text</label>
+                                        <textarea id="translitSourceInput" class="form-control" rows="6" placeholder="Type script words here (e.g. 'வணக்கம்' or 'வணக்கம், நீங்கள் எப்படி இருக்கிறீர்கள்?')..."></textarea>
+                                        <button id="translitBtn" class="btn btn-primary-gradient w-100 mt-3 py-2">Transliterate</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold">Romanized Phonetics Output</label>
+                                        <div id="translitResultBox" class="output-container p-3 bg-light font-monospace" style="min-height: 156px;">
+                                            <p class="text-muted">Transliterated guide results will populate here.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer Placeholder -->
+    <footer id="global-footer"></footer>
+
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Component and Main Scripts -->
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        // Custom tab pills styling updates
+        const tabElButtons = document.querySelectorAll('#v-pills-tab .nav-link');
+        tabElButtons.forEach(btn => {
+            btn.addEventListener('show.bs.tab', (e) => {
+                tabElButtons.forEach(b => b.classList.remove('sidebar-link-active'));
+                btn.classList.add('sidebar-link-active');
+            });
+        });
+
+        // 1. Document Upload simulation
+        const fileInputSelect = document.getElementById("fileInputSelect");
+        const dropzone = document.getElementById("dropzoneContainer");
+        const docOptions = document.getElementById("docTranslateOptions");
+        const docProgress = document.getElementById("docProgressIndicator");
+        const docComplete = document.getElementById("docCompleteIndicator");
+
+        if (fileInputSelect && dropzone) {
+            fileInputSelect.addEventListener("change", (e) => {
+                if (e.target.files.length > 0) {
+                    dropzone.classList.add("d-none");
+                    docOptions.classList.remove("d-none");
+                }
+            });
+
+            // Start translation simulation
+            const startDocBtn = document.getElementById("startDocTranslateBtn");
+            if (startDocBtn) {
+                startDocBtn.addEventListener("click", () => {
+                    docOptions.classList.add("d-none");
+                    docProgress.classList.remove("d-none");
+
+                    setTimeout(() => {
+                        docProgress.classList.add("d-none");
+                        docComplete.classList.remove("d-none");
+                    }, 2500);
+                });
+            }
+        }
+
+        // 2. Grammar Checker simulation
+        const grammarInput = document.getElementById("grammarInput");
+        const grammarCheckBtn = document.getElementById("grammarCheckBtn");
+        const grammarResult = document.getElementById("grammarResultBox");
+
+        if (grammarCheckBtn && grammarInput && grammarResult) {
+            grammarCheckBtn.addEventListener("click", () => {
+                const val = grammarInput.value.trim().toLowerCase();
+                if (!val) {
+                    alert("Please enter some sentences.");
+                    return;
+                }
+
+                grammarResult.innerHTML = `<div class="loader-spinner mb-2"></div>Checking syntax structure...`;
+                
+                setTimeout(() => {
+                    if (val.includes("hello")) {
+                        grammarResult.innerHTML = `
+                        <div class="alert alert-success py-2 mb-2"><i class="fas fa-check-circle me-1"></i> Sentence is grammatically correct.</div>
+                        <div class="small text-muted">Tone: Friendly & Welcoming. Pitch suggestions: standard.</div>`;
+                    } else if (val.includes("have went")) {
+                        grammarResult.innerHTML = `
+                        <div class="alert alert-warning py-2 mb-2"><i class="fas fa-exclamation-triangle me-1"></i> Suggestion: Change "have went" to "have gone"</div>
+                        <p class="small text-slate-800 mb-0">Explanation: The present perfect tense uses the auxiliary verb "have" and the past participle of the main verb ("gone").</p>`;
+                    } else {
+                        grammarResult.innerHTML = `
+                        <div class="alert alert-success py-2 mb-2"><i class="fas fa-check-circle me-1"></i> Checked by Teltam AI</div>
+                        <p class="small text-slate-800 mb-0">No primary syntax anomalies found. Tone parameters match professional communication guides.</p>`;
+                    }
+                }, 1000);
+            });
+        }
+
+        // 3. Transliteration box simulation
+        const translitSourceInput = document.getElementById("translitSourceInput");
+        const translitBtn = document.getElementById("translitBtn");
+        const translitResult = document.getElementById("translitResultBox");
+
+        if (translitBtn && translitSourceInput && translitResult) {
+            translitBtn.addEventListener("click", () => {
+                const val = translitSourceInput.value.trim();
+                if (!val) {
+                    alert("Please enter script words.");
+                    return;
+                }
+
+                translitResult.innerText = "Computing phonetic mappings...";
+                
+                setTimeout(() => {
+                    if (val.includes("வணக்கம்")) {
+                        translitResult.innerText = "Va-nak-kam";
+                    } else {
+                        translitResult.innerText = "Phonetic mapping guide generated: [llm-translit-output]";
+                    }
+                }, 800);
+            });
+        }
+    </script>
+</body>
+</html>

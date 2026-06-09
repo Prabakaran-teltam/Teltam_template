@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Hub - Teltam AI Video Tutorials</title>
+    <meta name="description" content="Watch step-by-step video tutorials and reviews about Teltam AI: text translation, document formatting, transliterating, and model API setups.">
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <!-- Custom Style Sheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="bg-soft-gradient" style="padding-top: 85px;">
+
+    <!-- Global Header Placeholder -->
+    <header id="global-header"></header>
+
+    <!-- Subpage Hero Section -->
+    <section class="py-5 bg-white border-bottom animate-fade-in-up">
+        <div class="container text-center py-4">
+            <span class="hero-badge"><i class="fab fa-youtube"></i> Video Hub</span>
+            <h1 class="display-4 fw-bold">Video <span class="text-gradient-primary">Tutorials &amp; Guides</span></h1>
+            <p class="lead text-slate-700 mx-auto" style="max-width: 600px; font-size: 1.1rem;">
+                Learn how to leverage Teltam's features through clean visual workflows, features reviews, and integrations.
+            </p>
+        </div>
+    </section>
+
+    <!-- Category Filters and Video Search -->
+    <section class="py-4 bg-light border-bottom">
+        <div class="container">
+            <div class="row align-items-center g-3">
+                <div class="col-md-6 d-flex flex-wrap gap-2 justify-content-center justify-content-md-start">
+                    <button class="btn btn-primary-gradient rounded-pill px-3 py-1">All Videos</button>
+                    <button class="btn btn-outline-custom border rounded-pill px-3 py-1 bg-white">Product Setup</button>
+                    <button class="btn btn-outline-custom border rounded-pill px-3 py-1 bg-white">Developer API</button>
+                    <button class="btn btn-outline-custom border rounded-pill px-3 py-1 bg-white">Tips &amp; Tricks</button>
+                </div>
+                <div class="col-md-6">
+                    <form class="d-flex" onsubmit="event.preventDefault(); alert('Video search activated (Mock)');">
+                        <div class="input-group">
+                            <span class="input-group-text bg-white border-end-0 text-muted"><i class="fas fa-search"></i></span>
+                            <input type="text" class="form-control border-start-0 py-2 shadow-none" placeholder="Search video tutorials..." style="outline: none;">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Grid Section -->
+    <section class="py-5">
+        <div class="container py-3">
+            <div class="row g-4">
+                <!-- Video Card 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="glass-card overflow-hidden h-100 bg-white">
+                        <div class="video-thumbnail-container bg-dark-gradient py-5 text-center text-white position-relative">
+                            <i class="fas fa-play display-4 text-danger opacity-75"></i>
+                            <div class="play-btn-overlay">
+                                <a href="youtube-detail.html" class="play-icon-circle"><i class="fas fa-play"></i></a>
+                            </div>
+                            <span class="badge bg-black position-absolute bottom-0 end-0 m-3 px-2 py-1">04:32</span>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-danger-subtle text-danger">Product Setup</span>
+                                <small class="text-muted">3 weeks ago</small>
+                            </div>
+                            <h5 class="fw-bold mb-2"><a href="youtube-detail.html" class="text-decoration-none text-dark">Getting Started with Teltam Document Translators</a></h5>
+                            <p class="text-slate-700 small" style="line-height:1.6;">
+                                Watch how to drag-and-drop complex PDF files, choose your target settings, and download localized formatting.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="glass-card overflow-hidden h-100 bg-white">
+                        <div class="video-thumbnail-container bg-dark-gradient py-5 text-center text-white position-relative">
+                            <i class="fas fa-code-branch display-4 text-info opacity-75"></i>
+                            <div class="play-btn-overlay">
+                                <a href="youtube-detail.html" class="play-icon-circle"><i class="fas fa-play"></i></a>
+                            </div>
+                            <span class="badge bg-black position-absolute bottom-0 end-0 m-3 px-2 py-1">08:15</span>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-info-subtle text-info">Developer API</span>
+                                <small class="text-muted">1 month ago</small>
+                            </div>
+                            <h5 class="fw-bold mb-2"><a href="youtube-detail.html" class="text-decoration-none text-dark">Integrating Teltam Translation APIs in Python</a></h5>
+                            <p class="text-slate-700 small" style="line-height:1.6;">
+                                A developer walkthrough showing script hooks, headers token authorization, and parsing response JSON translation structures.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 3 -->
+                <div class="col-md-6 col-lg-4 mx-auto">
+                    <div class="glass-card overflow-hidden h-100 bg-white">
+                        <div class="video-thumbnail-container bg-dark-gradient py-5 text-center text-white position-relative">
+                            <i class="fas fa-sparkles display-4 text-warning opacity-75"></i>
+                            <div class="play-btn-overlay">
+                                <a href="youtube-detail.html" class="play-icon-circle"><i class="fas fa-play"></i></a>
+                            </div>
+                            <span class="badge bg-black position-absolute bottom-0 end-0 m-3 px-2 py-1">05:48</span>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-success-subtle text-success">Tips &amp; Tricks</span>
+                                <small class="text-muted">2 months ago</small>
+                            </div>
+                            <h5 class="fw-bold mb-2"><a href="youtube-detail.html" class="text-decoration-none text-dark">Fine-Tuning Tone &amp; Punctuation Settings</a></h5>
+                            <p class="text-slate-700 small" style="line-height:1.6;">
+                                Learn how to alter parameters to match formal legal prose, corporate communications, or friendly colloquial statements.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer Placeholder -->
+    <footer id="global-footer"></footer>
+
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Component and Main Scripts -->
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans - Teltam AI Translation</title>
+    <meta name="description" content="Compare pricing plans for Teltam AI: Free, Pro, and Enterprise options. Choose the plan that fits your translation, transliteration, and document parsing needs.">
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <!-- Custom Style Sheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="bg-soft-gradient" style="padding-top: 85px;">
+
+    <!-- Global Header Placeholder -->
+    <header id="global-header"></header>
+
+    <!-- Subpage Hero Section -->
+    <section class="py-5 bg-white border-bottom animate-fade-in-up">
+        <div class="container text-center py-4">
+            <span class="hero-badge"><i class="fas fa-tags"></i> Pricing Plans</span>
+            <h1 class="display-4 fw-bold">Simple, <span class="text-gradient-primary">Predictable Pricing</span></h1>
+            <p class="lead text-slate-700 mx-auto" style="max-width: 600px; font-size: 1.1rem;">
+                No hidden charges. Choose a billing cycle that suits your personal or business translation goals.
+            </p>
+            
+            <!-- Monthly/Yearly Toggle -->
+            <div class="pricing-switch-container mt-4">
+                <span class="fw-semibold text-slate-800">Monthly Billing</span>
+                <label class="switch-custom">
+                    <input type="checkbox" id="billingSwitch">
+                    <span class="slider-custom"></span>
+                </label>
+                <span class="fw-semibold text-slate-800">Yearly Billing <span class="badge bg-success text-white ms-1" style="font-size: 0.75rem;">Save 20%</span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Cards Section -->
+    <section class="py-5">
+        <div class="container py-3">
+            <div class="row g-4 justify-content-center">
+                <!-- Free Plan -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card p-4 h-100 text-center d-flex flex-column justify-content-between bg-white">
+                        <div>
+                            <h3 class="fw-bold mb-1">Starter</h3>
+                            <p class="text-muted small">For basic translations and testing</p>
+                            <div class="my-4">
+                                <span class="display-4 fw-bold">$<span id="starterPriceText">9</span></span>
+                                <span class="text-muted billing-period-text">/month</span>
+                            </div>
+                            <ul class="list-unstyled text-start my-4 d-flex flex-column gap-3 border-top pt-4">
+                                <li><i class="fas fa-check text-success me-2"></i> 10,000 words per month</li>
+                                <li><i class="fas fa-check text-success me-2"></i> 10 supported languages</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Standard pronunciation synthesis</li>
+                                <li class="text-muted"><i class="fas fa-times me-2"></i> Transliteration phonetics guide</li>
+                                <li class="text-muted"><i class="fas fa-times me-2"></i> Document file uploads</li>
+                                <li class="text-muted"><i class="fas fa-times me-2"></i> API integration keys</li>
+                            </ul>
+                        </div>
+                        <a href="register.html" class="btn btn-outline-custom w-100 mt-4">Choose Starter</a>
+                    </div>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card p-4 h-100 text-center d-flex flex-column justify-content-between border border-primary relative bg-white" style="border-color: var(--color-indigo-600) !important; box-shadow: 0 15px 40px rgba(124, 58, 237, 0.12);">
+                        <div>
+                            <div class="badge bg-primary text-white mb-2 py-2 px-3 rounded-pill" style="background: var(--brand-primary-gradient) !important;">Most Popular</div>
+                            <h3 class="fw-bold mb-1">Pro</h3>
+                            <p class="text-muted small">For freelancers, learners, and writers</p>
+                            <div class="my-4">
+                                <span class="display-4 fw-bold">$<span id="proPriceText">29</span></span>
+                                <span class="text-muted billing-period-text">/month</span>
+                            </div>
+                            <ul class="list-unstyled text-start my-4 d-flex flex-column gap-3 border-top pt-4">
+                                <li><i class="fas fa-check text-success me-2"></i> 500,000 words per month</li>
+                                <li><i class="fas fa-check text-success me-2"></i> 120+ supported languages</li>
+                                <li><i class="fas fa-check text-success me-2"></i> High-fidelity voice synthesis</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Phonetic transliteration guides</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Translate PDFs, DOCX (100 files/mo)</li>
+                                <li class="text-muted"><i class="fas fa-times me-2"></i> API integration keys</li>
+                            </ul>
+                        </div>
+                        <a href="register.html" class="btn btn-primary-gradient w-100 mt-4">Upgrade to Pro</a>
+                    </div>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card p-4 h-100 text-center d-flex flex-column justify-content-between bg-white">
+                        <div>
+                            <h3 class="fw-bold mb-1">Enterprise</h3>
+                            <p class="text-muted small">For businesses and large-scale integrations</p>
+                            <div class="my-4">
+                                <span class="display-4 fw-bold">$<span id="enterprisePriceText">99</span></span>
+                                <span class="text-muted billing-period-text">/month</span>
+                            </div>
+                            <ul class="list-unstyled text-start my-4 d-flex flex-column gap-3 border-top pt-4">
+                                <li><i class="fas fa-check text-success me-2"></i> Unlimited words translation</li>
+                                <li><i class="fas fa-check text-success me-2"></i> All supported languages</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Dedicated GPU speeds</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Unlimited document processing</li>
+                                <li><i class="fas fa-check text-success me-2"></i> REST API keys (20 req/sec)</li>
+                                <li><i class="fas fa-check text-success me-2"></i> 24/7 Priority support manager</li>
+                            </ul>
+                        </div>
+                        <a href="contact.html" class="btn btn-outline-custom w-100 mt-4">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Features Comparison Matrix Table -->
+    <section class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">Compare Features Plan Matrix</h2>
+                <p class="text-slate-700">Find the perfect level of capabilities for your workloads.</p>
+            </div>
+            
+            <div class="table-responsive">
+                <table class="table table-bordered text-center align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th class="text-start" style="width: 40%;">Feature</th>
+                            <th style="width: 20%;">Starter</th>
+                            <th style="width: 20%;">Pro</th>
+                            <th style="width: 20%;">Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-start fw-semibold">Monthly Word Limit</td>
+                            <td>10,000</td>
+                            <td>500,000</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start fw-semibold">LLM Translation Context</td>
+                            <td>Standard</td>
+                            <td>High-Accuracy (Lrg Model)</td>
+                            <td>Custom Fine-Tuning Option</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start fw-semibold">Transliteration Engine</td>
+                            <td><i class="fas fa-times text-danger"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="text-start fw-semibold">Supported Languages</td>
+                            <td>10 Languages</td>
+                            <td>120+ Languages</td>
+                            <td>All Languages</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start fw-semibold">Document Formats (PDF, DOCX)</td>
+                            <td><i class="fas fa-times text-danger"></i></td>
+                            <td>100 Files/mo</td>
+                            <td>Unlimited Files</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start fw-semibold">API Keys Access</td>
+                            <td><i class="fas fa-times text-danger"></i></td>
+                            <td><i class="fas fa-times text-danger"></i></td>
+                            <td><i class="fas fa-check text-success"></i> (20 req/s)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start fw-semibold">Customer Support</td>
+                            <td>Email (48h response)</td>
+                            <td>Priority (12h response)</td>
+                            <td>24/7 Slack & Account Manager</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer Placeholder -->
+    <footer id="global-footer"></footer>
+
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Component and Main Scripts -->
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
